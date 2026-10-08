@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#102a2a">
+    <meta name="theme-color" content="#335c67">
     <meta name="description" content="Portafolio académico de Isidora Valverde Santibáñez, estudiante de Ingeniería Civil en Informática interesada en frontend y ciberseguridad.">
     <title>Isidora Valverde — Portafolio académico</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,16 +39,15 @@
                 <p class="hero-intro">Hola, soy <strong>Isidora Valverde</strong>, estudiante de Ingeniería Civil en Informática. Me interesa crear tecnología clara, accesible y segura.</p>
                 <a class="text-link" href="#proyectos">Explorar mi trabajo <span aria-hidden="true">↓</span></a>
             </div>
-            <div class="hero-art" aria-hidden="true">
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-                <div class="orbit orbit-three"></div>
-                <div class="orbit-core"><span>IVS</span><i></i></div>
-                <span class="orbit-label label-top">DISEÑO · CÓDIGO</span>
-                <span class="orbit-label label-bottom">APRENDER SIEMPRE</span>
-                <span class="orbit-cross cross-one">+</span>
-                <span class="orbit-cross cross-two">+</span>
-            </div>
+            <figure class="hero-art">
+                <div class="photo-orbit orbit-one" aria-hidden="true"></div>
+                <div class="photo-orbit orbit-two" aria-hidden="true"></div>
+                <div class="photo-orbit orbit-three" aria-hidden="true"></div>
+                <img class="hero-photo" src="img/isidora-valverde.jpeg" alt="Isidora Valverde, estudiante de Ingeniería Civil en Informática.">
+                <figcaption class="photo-caption"><span>ISIDORA VALVERDE</span><span>UCT · INFORMÁTICA</span></figcaption>
+                <span class="photo-cross cross-one" aria-hidden="true">+</span>
+                <span class="photo-cross cross-two" aria-hidden="true">+</span>
+            </figure>
             <div class="hero-index" aria-hidden="true">01 — 03</div>
         </section>
 
@@ -141,7 +140,11 @@
                 </div>
                 <div class="contact-action">
                     <p>Estoy abierta a conversar sobre desarrollo, tecnología y aprendizaje.</p>
-                    <a class="contact-button" href="https://github.com/isidoraavs" target="_blank" rel="noopener noreferrer">Encuéntrame en GitHub <span aria-hidden="true">↗</span></a>
+                    <div class="contact-links">
+                        <a class="contact-button email-button" href="mailto:ivalverde2026@alu.uct.cl">Escríbeme por correo <span aria-hidden="true">↗</span></a>
+                        <a class="contact-button github-button" href="https://github.com/isidoraavs" target="_blank" rel="noopener noreferrer">Encuéntrame en GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <p class="contact-email">ivalverde2026@alu.uct.cl</p>
                 </div>
             </div>
         </section>
@@ -152,5 +155,23 @@
         <p>Hecho con curiosidad en Temuco, Chile.</p>
         <p class="footer-copy">© 2026 Isidora Valverde Santibáñez · ICINF1107</p>
     </footer>
+    <script>
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!reduceMotion && "IntersectionObserver" in window) {
+        const revealItems = document.querySelectorAll(".profile, .projects, .contact, .project-card, .interest-list li");
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: "0px 0px -24px 0px" });
+
+        document.documentElement.classList.add("has-scroll-reveal");
+        revealItems.forEach((item) => revealObserver.observe(item));
+    }
+    </script>
 </body>
 </html>

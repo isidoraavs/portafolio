@@ -1,0 +1,22 @@
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Configuración local del editor
+.vscode/
+.idea/
+
+# Archivos temporales y de respaldo
+*.swp
+*.swo
+*~
+
+# Salidas generadas
+/dist/
+/coverage/
+
+# Variables de entorno y secretos locales
+.env
+.env.*
+!.env.example

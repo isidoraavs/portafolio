@@ -6,11 +6,14 @@ Portafolio personal desarrollado para la evaluación P2 de ICINF1107, Desarrollo
 
 - HTML5 semántico
 - CSS3, Flexbox y CSS Grid
+- JavaScript nativo para animaciones al desplazarse
 - Google Fonts (Manrope y DM Mono)
 
 ## Diseño y experiencia
 
-La propuesta visual combina una portada oscura de inspiración editorial con secciones claras, acentos verde lima y gráficos abstractos creados en CSS. El diseño se adapta a móviles, tabletas y escritorio; las tarjetas distinguen el proyecto realizado de las áreas que siguen en aprendizaje.
+La propuesta visual combina una portada azul petróleo con secciones claras y acentos medidos de amarillo cálido, ocre, rojo y burdeo. Los gráficos abstractos están creados en CSS. El diseño se adapta a móviles, tabletas y escritorio; las tarjetas distinguen el proyecto realizado de las áreas que siguen en aprendizaje.
+
+La fotografía de perfil se encuentra en `img/isidora-valverde.jpeg`. Las animaciones incluyen entrada del contenido, órbitas decorativas y aparición progresiva de secciones y tarjetas al desplazarse. Si el sistema tiene activada la opción de movimiento reducido, las animaciones se desactivan.
 
 ## Accesibilidad
 
@@ -19,6 +22,7 @@ La propuesta visual combina una portada oscura de inspiración editorial con sec
 - Jerarquía de encabezados y etiquetas de navegación descriptivas.
 - Las ilustraciones decorativas se ocultan de tecnologías de asistencia.
 - Respeto por la preferencia de movimiento reducido del sistema.
+- Texto alternativo descriptivo en la fotografía de perfil.
 
 ## Ejecutar localmente
 
@@ -27,6 +31,11 @@ La propuesta visual combina una portada oscura de inspiración editorial con sec
 
 Las fuentes tipográficas se cargan desde Google Fonts; si no hay conexión, se usan fuentes de respaldo del sistema.
 
-## Personalización pendiente
+## Archivos del repositorio
 
-El correo de contacto no se incluye porque no se proporcionó una dirección. Para agregarlo, incorpora un enlace `mailto:` en la sección de contacto. Las ilustraciones de las tarjetas son gráficas decorativas y no capturas de pantalla de los proyectos.
+- `.gitignore` excluye archivos temporales del sistema y del editor, carpetas de salida y archivos locales de entorno.
+- `img/` contiene los recursos visuales del sitio.
+
+## Contacto
+
+La sección de contacto incluye un enlace `mailto:` dirigido a `ivalverde2026@alu.uct.cl` y un enlace al perfil de GitHub. Al seleccionar el correo, se abre la aplicación de correo configurada en el dispositivo. Las ilustraciones de las tarjetas son gráficas decorativas y no capturas de pantalla de los proyectos.
