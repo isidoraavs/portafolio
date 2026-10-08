@@ -38,4 +38,4 @@ Las fuentes tipográficas se cargan desde Google Fonts; si no hay conexión, se 
 
 ## Contacto
 
-La sección de contacto incluye un enlace `mailto:` dirigido a `ivalverde2026@alu.uct.cl` y un enlace al perfil de GitHub. Al seleccionar el correo, se abre la aplicación de correo configurada en el dispositivo. Las ilustraciones de las tarjetas son gráficas decorativas y no capturas de pantalla de los proyectos.
+La sección de contacto incluye un botón para redactar un mensaje en Gmail con el destinatario `ivalverde2026@alu.uct.cl` ya completado, un enlace `mailto:` alternativo para la aplicación de correo configurada en el dispositivo y un enlace al perfil de GitHub. Las ilustraciones de las tarjetas son gráficas decorativas y no capturas de pantalla de los proyectos.

@@ -160,7 +160,9 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; border-rad
 .github-button { border: 1px solid var(--ink); background: transparent; color: var(--ink); }
 .github-button span { color: var(--red); }
 .github-button:hover { background: var(--ink); color: var(--paper); }
-.contact-email { margin-top: 14px !important; margin-bottom: 0 !important; font: .69rem var(--mono); }
+.contact-email { margin-top: 14px !important; margin-bottom: 5px !important; font-size: .72rem !important; }
+.contact-email a { color: var(--burgundy); font-weight: 800; text-underline-offset: 3px; }
+.contact-address { margin: 0 !important; color: rgba(51,92,103,.75); font: .68rem var(--mono) !important; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 23px max(24px, calc((100vw - 1120px) / 2)); background: var(--ink); color: var(--paper); }
 .footer-mark { font-size: 1.25rem; }.site-footer p { margin: 0; font-size: .68rem; }.footer-copy { color: rgba(255,250,240,.66); text-align: right; }
 
