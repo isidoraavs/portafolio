@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Uñas press-on hechas a medida. Elige tu diseño favorito y crea un set único con IVORA Nails."
+    />
+    <meta name="theme-color" content="#f8f5f0" />
+    <title>IVORA Nails — Tu estilo, a tu medida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Marca, navegacion y acceso al carrito -->
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="IVORA Nails, ir al inicio">
+        <span class="brand-mark">IV</span>
+        <span class="brand-name">IVORA <span>NAILS</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#coleccion">Colección</a>
+        <a href="#a-medida">A tu medida</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button
+        class="cart-trigger"
+        id="open-cart"
+        type="button"
+        aria-label="Abrir carrito"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L22 8H6M10 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+          />
+        </svg>
+        <span>Carrito</span>
+        <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> BELLEZA QUE VA CONTIGO</p>
+          <h1>Un detalle.<br />Todo <em>tu estilo.</em></h1>
+          <p class="hero-description">
+            Uñas press-on hechas a mano, pensadas para ti. Elige tu diseño,
+            encuentra tu forma y luce una manicura única cuando quieras.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#coleccion"
+              >Explorar diseños <span aria-hidden="true">↗</span></a
+            >
+            <a class="text-link" href="#a-medida"
+              >¿Cómo funciona? <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <div class="hero-note">
+            <span class="note-star">✳</span> Hechas a mano, hechas para ti.
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Manicure elegante en tonos rosados">
+          <img
+            src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1200&q=85"
+            alt="Manicura en tonos rosados con acabado brillante"
+          />
+          <div class="hero-sticker">
+            <span>YOUR<br />NAILS,</span><strong>YOUR<br />RULES</strong
+            ><i>✳</i>
+          </div>
+          <div class="hero-caption">
+            <span>01 / 06</span><span>LA BELLEZA ESTÁ EN LOS DETALLES</span>
+          </div>
+        </div>
+        <div class="hero-side-label">MANICURA A TU MANERA — 2026</div>
+      </section>
+
+      <section class="benefits" aria-label="Beneficios">
+        <div><span>✳</span> Diseño a elección</div>
+        <div><span>✳</span> Hechas a mano</div>
+        <div><span>✳</span> Reutilizables</div>
+        <div><span>✳</span> Desde $5.000 CLP</div>
+      </section>
+
+      <!-- Catalogo de disenos y filtros -->
+      <section class="collection section-wrap" id="coleccion">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ENCUENTRA TU FAVORITO</p>
+            <h2>Diseños <em>con personalidad</em></h2>
+          </div>
+          <p class="section-intro">
+            Cada set se prepara a mano y se adapta a tu estilo.
+          </p>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filtrar diseños">
+          <button
+            class="filter-button active"
+            type="button"
+            data-filter="todos"
+          >
+            Todos <span>06</span>
+          </button>
+          <button class="filter-button" type="button" data-filter="minimalista">
+            Minimalistas
+          </button>
+          <button class="filter-button" type="button" data-filter="frances">
+            French
+          </button>
+          <button class="filter-button" type="button" data-filter="glam">
+            Glam
+          </button>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <!-- Explicacion del proceso de personalizacion -->
+      <section class="custom-banner" id="a-medida">
+        <div class="custom-image">
+          <img
+            src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1000&q=85"
+            alt="Detalle de uñas cuidadas y esmaltadas"
+            loading="lazy"
+          />
+          <span class="image-tag">TU IDEA, EN TUS MANOS</span>
+        </div>
+        <div class="custom-copy">
+          <p class="eyebrow">NO HAY DOS ESTILOS IGUALES</p>
+          <h2>Tu diseño.<br /><em>A tu medida.</em></h2>
+          <p>
+            Elige el diseño que más te guste, tu forma y tu talla. Preparamos
+            cada set especialmente para ti, con ese toque personal que lo hace
+            único.
+          </p>
+          <div class="custom-steps">
+            <div>
+              <span>01</span>
+              <p>
+                <strong>Elige tu diseño</strong><br />Minimalista, French o con
+                brillo.
+              </p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>
+                <strong>Personaliza tu set</strong><br />Selecciona forma, talla
+                y detalles.
+              </p>
+            </div>
+            <div>
+              <span>03</span>
+              <p>
+                <strong>Lo hacemos para ti</strong><br />Hecho a mano con mucho
+                cariño.
+              </p>
+            </div>
+          </div>
+          <a class="button button-light" href="#coleccion"
+            >Encuentra tu set <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+
+      <!-- Contacto y pie de pagina -->
+      <section class="contact section-wrap" id="contacto">
+        <div>
+          <p class="eyebrow">¿TIENES UNA IDEA EN MENTE?</p>
+          <h2>Hablemos de <em>tus uñas.</em></h2>
+          <p>
+            Escríbeme para resolver tus dudas o conversar sobre un diseño
+            especial.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:ivalverde2026@alu.uct.cl">
+            <span class="contact-icon">✉</span>
+            <span
+              ><small>ESCRÍBEME</small
+              ><strong>ivalverde2026@alu.uct.cl</strong></span
+            >
+            <span class="contact-arrow">↗</span>
+          </a>
+          <div class="phone-contact">
+            <span class="contact-icon">☏</span>
+            <span
+              ><small>WHATSAPP · NÚMERO DE DEMOSTRACIÓN</small
+              ><strong>+56 9 0000 0000</strong></span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#inicio"
+        ><span class="brand-mark">IV</span
+        ><span class="brand-name">IVORA <span>NAILS</span></span></a
+      >
+      <p>Hechas a mano, hechas para ti. <span>♡</span></p>
+      <small>© 2026 IVORA Nails · Proyecto de curso</small>
+    </footer>
+
+    <!-- Paneles interactivos del carrito -->
+    <div class="overlay" id="overlay" hidden></div>
+    <aside
+      class="cart-drawer"
+      id="cart-drawer"
+      aria-label="Tu carrito"
+      aria-hidden="true"
+    >
+      <div class="drawer-heading">
+        <div>
+          <p class="eyebrow">TU SELECCIÓN</p>
+          <h2>Tu carrito <span id="drawer-count">(0)</span></h2>
+        </div>
+        <button
+          class="icon-button"
+          id="close-cart"
+          type="button"
+          aria-label="Cerrar carrito"
+        >
+          ×
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty">
+        <span>♡</span>
+        <h3>Tu carrito está esperando</h3>
+        <p>Encuentra ese diseño que se siente como tú.</p>
+        <button class="button button-dark" id="shop-from-cart" type="button">
+          Ver diseños
+        </button>
+      </div>
+      <div class="cart-summary" id="cart-summary" hidden>
+        <div><span>Subtotal</span><strong id="cart-subtotal">$0</strong></div>
+        <p>El valor del envío se coordina al confirmar tu pedido.</p>
+        <a
+          class="button button-dark checkout-button"
+          id="checkout-link"
+          href="mailto:ivalverde2026@alu.uct.cl"
+          >Solicitar pedido por correo <span>↗</span></a
+        >
+      </div>
+    </aside>
+
+    <dialog class="customize-dialog" id="customize-dialog">
+      <form id="customize-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">UN SET SOLO TUYO</p>
+            <h2>Personaliza tu diseño</h2>
+          </div>
+          <button
+            class="icon-button"
+            id="close-dialog"
+            type="button"
+            aria-label="Cerrar"
+          >
+            ×
+          </button>
+        </div>
+        <p class="selected-design" id="selected-design"></p>
+        <label for="nail-shape">Forma</label>
+        <select id="nail-shape" name="shape">
+          <option value="Almendra">Almendra</option>
+          <option value="Cuadrada">Cuadrada</option>
+          <option value="Coffin">Coffin</option>
+          <option value="Redonda">Redonda</option>
+        </select>
+        <label for="nail-size">Talla</label>
+        <select id="nail-size" name="size">
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <label for="nail-note">Detalle especial <span>(opcional)</span></label>
+        <textarea
+          id="nail-note"
+          name="note"
+          maxlength="100"
+          placeholder="Cuéntame si tienes alguna idea (máx. 100 caracteres)"
+        ></textarea>
+        <button class="button button-dark dialog-submit" type="submit">
+          Añadir al carrito <span>↗</span>
+        </button>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
